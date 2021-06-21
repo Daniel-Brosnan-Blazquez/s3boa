@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}
+<title>S3BOA - Bussiness Operation Analysis for Sentinel-1</title>
+{% endblock %}
+{% block project_version %}S3BOA 1.0.0{% endblock %}
+{% block project_header %}
+<!-- Logo is exported with a heigth of 60 pixels -->
+<div style="background-color: #00d6a8ff; width:100%">
+  <div style="text-align:left; width: calc(99% / 3); display: inline-block">
+    <img src="/s3_static_images/copernicus.png"/>
+  </div>
+  <div style="text-align:center; width: calc(99% / 3); display: inline-block">
+    <img src="/s3_static_images/sentinel3.png"/>
+  </div>
+  <div style="text-align:right; width: calc(99% / 3); display: inline-block">
+    <img src="/s3_static_images/esa.png"/>
+    <img src="/s3_static_images/eu_comission.png"/>
+  </div>
+</div>
+{% endblock %}
+{% block side_panel_plugins %}
+<li>
+  <a href="#"><i class="fa fa-file-text-o fa-fw"></i> S3 reporting<span class="fa arrow"></span></a>
+  <ul class="nav nav-second-level">
+    <li>
+      <a href="#"><i class="fa fa-globe fa-fw"></i> Data availability in DHUS<span class="fa arrow"></span></a>
+      <ul class="nav nav-second-level">
+        <li>
+          <a href="/views/dhus-availability?view=all"><i class="fa fa-pie-chart fa-fw"></i> Complete view</a>
+        </li>
+        <li>
+          <a href="/views/dhus-availability?view=completeness"><i class="fa fa-tasks fa-fw"></i> Completeness view</a>
+        </li>
+        <li>
+          <a href="/views/dhus-availability?view=timeliness"><i class="fa fa-clock-o fa-fw"></i> Timeliness view</a>
+        </li>
+        <li>
+          <a href="/views/dhus-availability?view=volumes"><i class="fa fa-sitemap fa-fw"></i> Data volumes view</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <!-- /.nav-second-level -->
+</li>
+{% endblock %}

@@ -1,0 +1,2 @@
+graft s3vboa/templates
+graft s3vboa/static

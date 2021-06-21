@@ -1,0 +1,33 @@
+<triggering_rules>
+  <!-- S3A specific with dependecies -->
+  <rule>
+    <source_mask>S3A_OPER_MPL__NPPF__........T......_........T......_.....EOF</source_mask>
+    <source_type>S3A_MPL__NPPF</source_type>
+    <tool>
+      <command>eboa_ingestion.py -p s3boa.ingestions.ingestion_nppf.ingestion_nppf -f </command>
+    </tool>
+  </rule>
+  <rule>
+    <source_mask>DEC_OPER_..DHUS_S3A_AUIP_........T.......V........T......_........T......_.*_.*.xml</source_mask>
+    <source_type>S3A_AUIP_DHUS</source_type>
+    <tool>
+      <command>eboa_ingestion.py -p s3boa.ingestions.ingestion_dhus_products.ingestion_dhus_products -f </command>
+    </tool>
+  </rule>
+  <!-- end S3A specific with dependecies  -->
+  <!-- S3B specific with dependecies -->
+  <rule>
+    <source_mask>S3B_OPER_MPL__NPPF__........T......_........T......_.....EOF</source_mask>
+    <source_type>S3B_MPL__NPPF</source_type>
+    <tool>
+      <command>eboa_ingestion.py -p s3boa.ingestions.ingestion_nppf.ingestion_nppf -f </command>
+    </tool>
+  </rule>
+  <rule>
+    <source_mask>DEC_OPER_..DHUS_S3A_AUIP_........T.......V........T......_........T......_.*_.*.xml</source_mask>
+    <source_type>S3B_AUIP_DHUS</source_type>
+    <tool>
+      <command>eboa_ingestion.py -p s3boa.ingestions.ingestion_dhus_products.ingestion_dhus_products -f </command>
+    </tool>
+  </rule>
+</triggering_rules>
